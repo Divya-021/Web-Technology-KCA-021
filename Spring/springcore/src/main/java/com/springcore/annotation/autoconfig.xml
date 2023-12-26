@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+<!--  autowire using xml 
+<bean name="address" class="com.springcore.annotation.Address">
+<property name="street" value="muradnagar"/>
+<property name="city" value="Ghaziabad"/>
+</bean>
+<bean name="emp1" class="com.springcore.annotation.Emp" autowire="byname"/>
+-->
+<!-- Autowire Annotation -->
+<context:annotation-config/>
+<bean name="address" class="com.springcore.annotation.Address">
+<property name="street" value="muradnagar"/>
+<property name="city" value="Ghaziabad"/>
+</bean>
+<!-- used for qualifier Annotation when there are multiple beans-->
+<bean name="address1" class="com.springcore.annotation.Address">
+<property name="street" value="chopla"/>
+<property name="city" value="Meerut"/>
+</bean>
+
+<bean name="emp1" class="com.springcore.annotation.Emp"/>
+</beans>
+<!-- Qualifier Annotation -->
+  
